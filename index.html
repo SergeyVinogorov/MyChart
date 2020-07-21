@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/alasql/0.5.5/alasql.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 数据表 -->
+	<div class="row">
+		<div class="col">
+			<h3>goal</h3>
+			<table id="database1">
+			</table>
+		</div>
+		<div class="col">
+			<h3>game</h3>
+			<table id="database2">
+			</table>
+		</div>
+	</div>
+	<br />
+	<!--  sql输入 -->
+	<textarea id="sql-input">
+	</textarea>
+	<!-- 运行sql -->
+	<button onclick="handleRunClick()">RUN</button>
+	<!-- 清空结果 -->
+	<button onclick="handleClearClick()">CLEAR</button>
+	<!-- 结果展示 -->
+	<table id="result"></table>
+	<div class="chart">
+		<canvas id="myChart" width="400" height="400"></canvas>
+		<button type="button" onclick="handleReset()">Reset</button>
+	</div>
+
+	<script src="main.js"></script>
+	<script src="chart.js"></script>
+
+
+</body>
+</html>
